@@ -1,11 +1,12 @@
 import EventHandler from "./EventHandler";
+import DOMEventHandler from "./DOMEventHandler";
 
 export default abstract class AbstractShareButton {
     eventHandler: EventHandler;
     cssClass: string;
 
-    constructor(cssClass: string) {
-        this.eventHandler = new EventHandler();
+    constructor(eventHendler: EventHandler, cssClass: string) {
+        this.eventHandler = eventHendler;
         this.cssClass = cssClass;
     }
 
