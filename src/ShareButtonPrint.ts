@@ -2,11 +2,11 @@ import AbstractShareButton from "./AbstractShareButton";
 
 export default class ShareButtonPrint extends AbstractShareButton {
 
-    constructor(cssClass: string, url: string) {
-        super(cssClass, url);
+    constructor(cssClass: string) {
+        super(cssClass);
     }
 
-    createLink(): string {
-        throw new Error('Unsupported method exception.');
+    createAction() {
+        return () => window.print();
     }
 }
